@@ -11,7 +11,7 @@ const Index = () => {
 
   // Mock data for stats
   const stats = [
-    { label: 'Eyes Analyzed', value: 25678, icon: <Eye className="h-5 w-5" />, maxValue: 5000 },
+    { label: 'Eyes Analyzed', value: 25678, icon: <Eye className="h-5 w-5" />, maxValue: 5000, randomize: true },
     { label: 'Success Rate', value: 98, unit: '%', icon: <CheckCircle className="h-5 w-5" /> },
     { label: 'Medical Partners', value: 126, icon: <Users className="h-5 w-5" /> },
     { label: 'Disease Types', value: 12, icon: <LineChart className="h-5 w-5" /> }
@@ -146,6 +146,7 @@ const Index = () => {
                 icon={stat.icon}
                 duration={2000 + (index * 500)}
                 maxValue={stat.maxValue}
+                randomize={stat.randomize}
               />
             ))}
           </div>
