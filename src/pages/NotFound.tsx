@@ -14,10 +14,10 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-eye-light-gray">
+    <div className="min-h-screen flex items-center justify-center bg-eye-light-beige">
       <div className="text-center max-w-md mx-auto px-4 py-16 animate-fade-in">
-        <div className="inline-block p-4 bg-eye-light-blue rounded-full mb-6">
-          <Search className="h-10 w-10 text-eye-blue" />
+        <div className="inline-block p-4 bg-eye-light-green rounded-full mb-6">
+          <Search className="h-10 w-10 text-eye-green" />
         </div>
         <h1 className="text-5xl font-bold mb-4 text-gradient">404</h1>
         <p className="text-2xl text-foreground mb-6">Oops! Page not found</p>

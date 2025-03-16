@@ -69,6 +69,12 @@ export default {
 					'dark-blue': '#005C99',
 					'gray': '#F2F7FA',
 					'light-gray': '#F8FBFE',
+					// New theme colors based on the image
+					'green': '#215E41',
+					'dark-green': '#1A4A33',
+					'light-green': '#8FB18A',
+					'beige': '#E6E1D3',
+					'light-beige': '#F2F0E6',
 				}
 			},
 			borderRadius: {
@@ -189,6 +195,9 @@ export default {
 				'hero-pattern': 'linear-gradient(to right, #0099FF, #005C99)',
 				'blue-gradient': 'linear-gradient(120deg, #E0F4FF, #F8FBFE)',
 				'card-gradient': 'linear-gradient(145deg, #FFFFFF, #F2F7FA)',
+				// New gradients
+				'green-gradient': 'linear-gradient(145deg, #215E41, #1A4A33)',
+				'beige-gradient': 'linear-gradient(120deg, #E6E1D3, #F2F0E6)',
 			},
 			boxShadow: {
 				'soft': '0 10px 30px -15px rgba(0, 0, 0, 0.1)',

@@ -15,7 +15,7 @@ const StatsCard = ({
   value, 
   unit = '', 
   icon,
-  color = 'bg-eye-light-blue text-eye-blue',
+  color = 'bg-eye-light-green text-eye-green',
   duration = 2000
 }: StatsCardProps) => {
   const [count, setCount] = useState(0);
