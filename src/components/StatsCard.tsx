@@ -8,6 +8,7 @@ interface StatsCardProps {
   icon: React.ReactNode;
   color?: string;
   duration?: number;
+  maxValue?: number; // New prop to cap the displayed value
 }
 
 const StatsCard = ({ 
@@ -16,13 +17,15 @@ const StatsCard = ({
   unit = '', 
   icon,
   color = 'bg-eye-light-green text-eye-green',
-  duration = 2000
+  duration = 2000,
+  maxValue // Optional cap for the displayed value
 }: StatsCardProps) => {
   const [count, setCount] = useState(0);
   
   useEffect(() => {
     let start = 0;
-    const end = Math.min(value, 9999);
+    // Use the maxValue if provided, otherwise use the actual value
+    const end = maxValue ? Math.min(value, maxValue) : Math.min(value, 9999);
     
     // Don't want a divide by zero error!
     if (start === end) return;
@@ -35,7 +38,7 @@ const StatsCard = ({
     }, incrementTime);
     
     return () => clearInterval(timer);
-  }, [value, duration]);
+  }, [value, duration, maxValue]);
 
   return (
     <div className="glass-card p-6 animate-scale-up">
