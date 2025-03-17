@@ -8,8 +8,6 @@ interface StatsCardProps {
   icon: React.ReactNode;
   color?: string;
   duration?: number;
-  maxValue?: number; // Cap for the displayed value
-  randomize?: boolean; // New prop to randomize the displayed value
 }
 
 const StatsCard = ({ 
@@ -17,24 +15,14 @@ const StatsCard = ({
   value, 
   unit = '', 
   icon,
-  color = 'bg-eye-light-green text-eye-green',
-  duration = 2000,
-  maxValue, // Optional cap for the displayed value
-  randomize = false // Whether to show a random number
+  color = 'bg-eye-light-blue text-eye-blue',
+  duration = 2000
 }: StatsCardProps) => {
   const [count, setCount] = useState(0);
   
   useEffect(() => {
     let start = 0;
-    // Generate a random number between 1 and maxValue if randomize is true
-    const randomValue = randomize && maxValue 
-      ? Math.floor(Math.random() * maxValue) + 1 
-      : value;
-    
-    // Use the maxValue if provided, otherwise use the actual value or random value
-    const end = maxValue 
-      ? Math.min(randomize ? randomValue : value, maxValue) 
-      : Math.min(value, 9999);
+    const end = Math.min(value, 9999);
     
     // Don't want a divide by zero error!
     if (start === end) return;
@@ -47,7 +35,7 @@ const StatsCard = ({
     }, incrementTime);
     
     return () => clearInterval(timer);
-  }, [value, duration, maxValue, randomize]);
+  }, [value, duration]);
 
   return (
     <div className="glass-card p-6 animate-scale-up">

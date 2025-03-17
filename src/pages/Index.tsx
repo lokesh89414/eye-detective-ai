@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Eye, LineChart, Zap, CheckCircle, Brain, Users } from 'lucide-react';
@@ -11,7 +12,7 @@ const Index = () => {
 
   // Mock data for stats
   const stats = [
-    { label: 'Eyes Analyzed', value: 25678, icon: <Eye className="h-5 w-5" />, maxValue: 5000, randomize: true },
+    { label: 'Eyes Analyzed', value: 25678, icon: <Eye className="h-5 w-5" /> },
     { label: 'Success Rate', value: 98, unit: '%', icon: <CheckCircle className="h-5 w-5" /> },
     { label: 'Medical Partners', value: 126, icon: <Users className="h-5 w-5" /> },
     { label: 'Disease Types', value: 12, icon: <LineChart className="h-5 w-5" /> }
@@ -145,8 +146,6 @@ const Index = () => {
                 unit={stat.unit}
                 icon={stat.icon}
                 duration={2000 + (index * 500)}
-                maxValue={stat.maxValue}
-                randomize={stat.randomize}
               />
             ))}
           </div>
