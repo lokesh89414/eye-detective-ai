@@ -4,149 +4,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Eye Diseases - EyeDetect</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Eye Diseases Information - Eye Care Pro</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Add required Lovable script tag -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
+  <!-- Header/Navigation -->
+  <header class="header-simple">
+    <nav class="navbar">
       <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-        <span>EyeDetect</span>
+        <img src="https://images.unsplash.com/photo-1522230111100-bceae1370e46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=50&h=50&q=80" alt="Eye Care Pro Logo">
+        <span>Eye Care Pro</span>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="prediction.html">Prediction</a></li>
-          <li><a href="about.html" class="active">About Eye Diseases</a></li>
-        </ul>
-      </nav>
-    </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="prediction.html">Eye Check</a></li>
+        <li><a href="about.html" class="active">Eye Diseases</a></li>
+      </ul>
+      <button class="contact-btn">Contact Us</button>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
   </header>
 
-  <div class="about-page">
-    <div class="container">
-      <div class="page-header">
-        <h1 class="animate-fade-in">About Eye Diseases</h1>
-        <p class="animate-fade-in">
-          Learn about common eye diseases, their symptoms, causes, and treatments.
-        </p>
-      </div>
+  <!-- Main Content -->
+  <main class="about-diseases-container">
+    <section class="about-header">
+      <h1>Common Eye Diseases</h1>
+      <p>Learn about the eye conditions our AI can detect and their symptoms</p>
       
-      <!-- Search -->
-      <div class="search-container animate-fade-in">
-        <div class="search-input-container">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input 
-            type="text" 
-            id="diseaseSearch" 
-            placeholder="Search for a disease..." 
-            class="search-input"
-          >
+      <!-- Search box -->
+      <div class="search-container">
+        <input type="text" id="diseaseSearch" class="search-input" placeholder="Search for an eye disease...">
+        <button id="clearSearch" class="clear-search">×</button>
+      </div>
+    </section>
+
+    <!-- No results message -->
+    <div id="noResults" class="no-results hidden">
+      <img src="https://images.unsplash.com/photo-1577036421869-5655c5c798b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80" alt="No results">
+      <h3>No diseases found</h3>
+      <p>Try a different search term or browse all diseases</p>
+    </div>
+
+    <!-- Disease cards container -->
+    <div id="diseaseCards" class="disease-cards-container">
+      <!-- Cards will be dynamically added via JavaScript -->
+    </div>
+
+    <!-- Template for disease cards -->
+    <template id="diseaseCardTemplate">
+      <div class="disease-card animate-fade-in">
+        <div class="disease-image">
+          <img src="" alt="">
+        </div>
+        <div class="disease-content">
+          <h2 class="disease-title"></h2>
+          <div class="disease-description"></div>
+          
+          <div class="disease-details-container">
+            <div class="disease-symptoms">
+              <h3>Common Symptoms</h3>
+              <ul class="disease-list"></ul>
+            </div>
+            
+            <div class="disease-treatments">
+              <h3>Treatment Options</h3>
+              <ul class="disease-list"></ul>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <!-- Disease Cards -->
-      <div class="disease-cards-container" id="diseaseCards">
-        <!-- Disease cards will be populated by JavaScript -->
+    </template>
+
+    <!-- Call to action -->
+    <section class="disease-cta">
+      <div class="cta-content animate-fade-in">
+        <h2>Concerned About Your Eye Health?</h2>
+        <p>Use our AI-powered tool to screen for potential eye conditions and get personalized recommendations.</p>
+        <a href="prediction.html" class="primary-btn">Check My Eyes Now</a>
+      </div>
+    </section>
+    
+    <!-- Resources -->
+    <section class="resources-section">
+      <div class="section-header">
+        <h2 class="animate-scale-up">Additional Resources</h2>
+        <p class="animate-scale-up">Learn more about eye health and care from these trusted sources</p>
       </div>
       
-      <!-- No results message -->
-      <div id="noResults" class="no-results hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="no-results-icon"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-        <h3>No matching diseases found</h3>
-        <p>
-          Try searching with different keywords or clear your search.
-        </p>
-        <button id="clearSearch" class="btn-primary mt-4">
-          Clear Search
-        </button>
+      <div class="resources-grid">
+        <a href="#" class="resource-card animate-slide-in-left">
+          <h3>Understanding Eye Exams</h3>
+          <p>Learn what to expect during a comprehensive eye examination and why they're important.</p>
+          <span class="resource-link">Read More →</span>
+        </a>
+        
+        <a href="#" class="resource-card animate-scale-up">
+          <h3>Lifestyle Changes for Eye Health</h3>
+          <p>Simple adjustments to your daily routine that can help protect and improve your vision.</p>
+          <span class="resource-link">Read More →</span>
+        </a>
+        
+        <a href="#" class="resource-card animate-slide-in-right">
+          <h3>Finding an Eye Care Specialist</h3>
+          <p>Tips for selecting the right ophthalmologist or optometrist for your specific needs.</p>
+          <span class="resource-link">Read More →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="https://images.unsplash.com/photo-1522230111100-bceae1370e46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=50&h=50&q=80" alt="Eye Care Pro Logo">
+        <h3>Eye Care Pro</h3>
+        <p>AI-powered eye disease detection</p>
       </div>
       
-      <!-- FAQ Section -->
-      <section class="faq-section">
-        <div class="section-header">
-          <h2 class="animate-fade-in">Frequently Asked Questions</h2>
-          <p class="animate-fade-in">
-            Common questions about eye health and disease detection.
-          </p>
+      <div class="footer-links">
+        <div class="footer-links-column">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="prediction.html">Eye Check</a></li>
+            <li><a href="about.html">Eye Diseases</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </div>
         
-        <div class="faq-container">
-          <div class="faq-card animate-slide-in-right" style="animation-delay: 0ms;">
-            <h3>How accurate is the AI disease detection?</h3>
-            <p>Our AI model has achieved an accuracy rate of approximately 90-95% in detecting common eye diseases, comparable to experienced ophthalmologists. However, it's designed to be a screening tool and not a replacement for professional medical diagnosis.</p>
-          </div>
-          
-          <div class="faq-card animate-slide-in-right" style="animation-delay: 100ms;">
-            <h3>How often should I get my eyes checked?</h3>
-            <p>Most eye care professionals recommend a comprehensive eye exam every 1-2 years, depending on your age, risk factors, and whether you currently wear glasses or contact lenses. Those with existing eye conditions or diseases like diabetes may need more frequent examinations.</p>
-          </div>
-          
-          <div class="faq-card animate-slide-in-right" style="animation-delay: 200ms;">
-            <h3>Can eye diseases be prevented?</h3>
-            <p>While not all eye diseases can be prevented, many can be detected early and managed effectively. Maintaining a healthy lifestyle, protecting your eyes from UV exposure, not smoking, and having regular eye exams are all ways to reduce your risk and catch issues early.</p>
-          </div>
-          
-          <div class="faq-card animate-slide-in-right" style="animation-delay: 300ms;">
-            <h3>Is the online detection service a replacement for visiting an eye doctor?</h3>
-            <p>No, our AI detection service is meant to be a preliminary screening tool and should not replace regular visits to an eye care professional. Always follow up with a doctor for proper diagnosis and treatment plans.</p>
-          </div>
+        <div class="footer-links-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
         </div>
-      </section>
-      
-      <!-- CTA Section -->
-      <section class="cta-card animate-scale-up">
-        <h2>Ready to Check Your Eye Health?</h2>
-        <p>
-          Early detection of eye diseases is crucial for successful treatment. Use our AI-powered service to screen for potential issues.
-        </p>
-        <a href="prediction.html" class="btn-primary">
-          Start Free Detection
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-        </a>
-      </section>
+        
+        <div class="footer-links-column">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-  
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 EyeDetect. All rights reserved. This application is for educational purposes only.</p>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 Eye Care Pro. All rights reserved.</p>
+      <p>Disclaimer: This tool is not a substitute for professional medical advice, diagnosis, or treatment.</p>
     </div>
   </footer>
-
-  <!-- Disease Card Template (hidden) -->
-  <template id="diseaseCardTemplate">
-    <div class="disease-card animate-scale-up">
-      <div class="disease-image">
-        <img src="" alt="">
-      </div>
-      <div class="disease-content">
-        <h3 class="disease-title"></h3>
-        <p class="disease-description"></p>
-        
-        <div class="disease-details">
-          <div class="disease-symptoms">
-            <h4>Common Symptoms</h4>
-            <ul class="disease-list">
-              <!-- Will be populated by JS -->
-            </ul>
-          </div>
-          
-          <div class="disease-treatments">
-            <h4>Treatment Options</h4>
-            <ul class="disease-list">
-              <!-- Will be populated by JS -->
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
 
   <script src="about.js"></script>
 </body>

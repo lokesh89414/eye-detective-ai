@@ -4,253 +4,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EyeDetect - AI-Powered Eye Disease Detection</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Eye Care Pro - AI-Powered Eye Disease Detection</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Add required Lovable script tag -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <nav class="navbar">
       <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-        <span>EyeDetect</span>
+        <img src="https://images.unsplash.com/photo-1522230111100-bceae1370e46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=50&h=50&q=80" alt="Eye Care Pro Logo">
+        <span>Eye Care Pro</span>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="prediction.html">Prediction</a></li>
-          <li><a href="about.html">About Eye Diseases</a></li>
-        </ul>
-      </nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="prediction.html">Eye Check</a></li>
+        <li><a href="about.html">Eye Diseases</a></li>
+      </ul>
+      <button class="contact-btn">Contact Us</button>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    
+    <div class="hero-content">
+      <div class="hero-text animate-fade-in">
+        <h1>Early Detection <br>Better Prevention</h1>
+        <p>Our AI-powered application can detect early signs of eye diseases from a simple photo. Fast, accurate, and accessible eye health screenings from the comfort of your home.</p>
+        <div class="hero-buttons">
+          <a href="prediction.html" class="primary-btn">Check My Eyes Now</a>
+          <a href="#how-it-works" class="secondary-btn">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image animate-fade-in">
+        <img src="https://images.unsplash.com/photo-1551883040-2c5ccb4c4d84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=800&q=80" alt="Eye Care Tech">
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
-    <div class="absolute w-full h-full bg-gradient-radial from-white/5 via-transparent to-transparent"></div>
-    
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge animate-fade-in">
-            <div class="badge">
-              <span class="badge-dot"></span>
-              AI-Powered Eye Disease Detection
-            </div>
-          </div>
-          
-          <h1 class="hero-text animate-fade-in">
-            Detect Eye Diseases <span class="highlight">Early</span> & <span class="highlight">Accurately</span>
-          </h1>
-          
-          <p class="hero-description animate-fade-in">
-            Our AI-powered technology analyzes eye images with high precision to identify early signs of eye diseases. Fast, reliable, and easy to use.
-          </p>
-          
-          <div class="hero-buttons animate-fade-in">
-            <a href="prediction.html" class="btn-primary">
-              Start Diagnosis
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </a>
-            <a href="about.html" class="btn-secondary">
-              Learn About Eye Diseases
-            </a>
-          </div>
-        </div>
-        
-        <div class="hero-image animate-fade-in">
-          <div class="image-container">
-            <div class="image-glow"></div>
-            <div class="image-card">
-              <img 
-                src="https://images.unsplash.com/photo-1559076294-ad5d4efe4178?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" 
-                alt="AI eye scanning visualization"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="hero-bottom-fade"></div>
-  </section>
-  
-  <!-- Features Section -->
-  <section class="features-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="animate-fade-in">How It Works</h2>
-        <p class="animate-fade-in">
-          Our advanced AI technology makes eye disease detection simple, accurate, and accessible.
-        </p>
-      </div>
-      
-      <div class="features-grid">
-        <div class="feature-card animate-scale-up" style="animation-delay: 100ms;">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-          </div>
-          <h3>Fast Analysis</h3>
-          <p>Upload your eye image and receive results in seconds, not days.</p>
-        </div>
-        
-        <div class="feature-card animate-scale-up" style="animation-delay: 200ms;">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          </div>
-          <h3>High Accuracy</h3>
-          <p>Our AI model has been trained on thousands of medical images for reliable results.</p>
-        </div>
-        
-        <div class="feature-card animate-scale-up" style="animation-delay: 300ms;">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.6-2 5-7 9-5-4-7-6.4-7-9a7 7 0 0 1 7-7z"></path><circle cx="12" cy="9" r="2"></circle><path d="M6 20h12"></path><path d="M9 16v4"></path><path d="m15 16-2 4"></path></svg>
-          </div>
-          <h3>AI-Powered</h3>
-          <p>Advanced deep learning algorithms detect patterns invisible to the human eye.</p>
-        </div>
-        
-        <div class="feature-card animate-scale-up" style="animation-delay: 400ms;">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 2.5h3L12 7"></path><path d="M10 9v10a3 3 0 0 0 3 3v-3"></path><path d="M10 9h2.5a3 3 0 0 1 0 6H10"></path></svg>
-          </div>
-          <h3>Easy to Use</h3>
-          <p>Simple interface designed for everyone, no technical expertise required.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
   <!-- Stats Section -->
   <section class="stats-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="animate-fade-in">Live Stats Dashboard</h2>
-        <p class="animate-fade-in">
-          Real-time metrics demonstrating our platform's impact on eye health worldwide.
-        </p>
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-number">
+          <span class="stats-value" data-value="95" data-duration="2000">0</span>%
+        </div>
+        <p>Accuracy Rate</p>
       </div>
-      
-      <div class="stats-grid">
-        <div class="stats-card">
-          <div class="stats-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-          </div>
-          <div class="stats-content">
-            <div class="stats-value" data-value="25678" data-duration="2000">0</div>
-            <div class="stats-label">Eyes Analyzed</div>
-          </div>
+      <div class="stat-card">
+        <div class="stat-number">
+          <span class="stats-value" data-value="2500" data-duration="2500">0</span>+
         </div>
-        
-        <div class="stats-card">
-          <div class="stats-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          </div>
-          <div class="stats-content">
-            <div class="stats-value" data-value="98" data-duration="2500">0</div>
-            <div class="stats-label">Success Rate %</div>
-          </div>
+        <p>Eye Scans Analyzed</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">
+          <span class="stats-value" data-value="8" data-duration="1500">0</span>
         </div>
-        
-        <div class="stats-card">
-          <div class="stats-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-          </div>
-          <div class="stats-content">
-            <div class="stats-value" data-value="126" data-duration="3000">0</div>
-            <div class="stats-label">Medical Partners</div>
-          </div>
+        <p>Eye Conditions Detected</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">
+          <span class="stats-value" data-value="98" data-duration="2200">0</span>%
         </div>
-        
-        <div class="stats-card">
-          <div class="stats-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
-          </div>
-          <div class="stats-content">
-            <div class="stats-value" data-value="12" data-duration="3500">0</div>
-            <div class="stats-label">Disease Types</div>
-          </div>
-        </div>
+        <p>User Satisfaction</p>
       </div>
     </div>
   </section>
-  
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works-section">
+    <div class="section-header">
+      <h2 class="animate-scale-up">How It Works</h2>
+      <p class="animate-scale-up">Get your eye health assessment in three simple steps</p>
+    </div>
+    
+    <div class="steps-container">
+      <div class="step-card animate-slide-in-left">
+        <div class="step-icon">
+          <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="Upload icon">
+        </div>
+        <h3>Upload Eye Image</h3>
+        <p>Take a clear photo of your eye or upload an existing one using your smartphone or computer.</p>
+      </div>
+      
+      <div class="step-card animate-scale-up">
+        <div class="step-icon">
+          <img src="https://images.unsplash.com/photo-1599508704512-2f19efd1e35f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="AI Analysis icon">
+        </div>
+        <h3>AI Analysis</h3>
+        <p>Our advanced AI algorithm analyzes your eye image for signs of common eye diseases.</p>
+      </div>
+      
+      <div class="step-card animate-slide-in-right">
+        <div class="step-icon">
+          <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="Results icon">
+        </div>
+        <h3>Get Results</h3>
+        <p>Receive a detailed report with potential risk factors and recommended next steps.</p>
+      </div>
+    </div>
+    
+    <div class="cta-container animate-fade-in">
+      <p>Ready to check your eye health?</p>
+      <a href="prediction.html" class="primary-btn">Start Now</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="section-header">
+      <h2 class="animate-scale-up">Why Choose Eye Care Pro?</h2>
+      <p class="animate-scale-up">Our technology makes eye disease detection accessible to everyone</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card animate-slide-in-left">
+        <div class="feature-icon">
+          <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="Accuracy icon">
+        </div>
+        <h3>High Accuracy</h3>
+        <p>Our AI model has been trained on thousands of eye images with proven clinical accuracy.</p>
+      </div>
+      
+      <div class="feature-card animate-slide-in-left">
+        <div class="feature-icon">
+          <img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="Fast icon">
+        </div>
+        <h3>Quick Results</h3>
+        <p>Get your eye health assessment in less than a minute after uploading your photo.</p>
+      </div>
+      
+      <div class="feature-card animate-slide-in-right">
+        <div class="feature-icon">
+          <img src="https://images.unsplash.com/photo-1631733218656-6c10db7de2c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="Privacy icon">
+        </div>
+        <h3>Privacy First</h3>
+        <p>Your eye images and health data are encrypted and never shared with third parties.</p>
+      </div>
+      
+      <div class="feature-card animate-slide-in-right">
+        <div class="feature-icon">
+          <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="Accessibility icon">
+        </div>
+        <h3>Easy Access</h3>
+        <p>No need for special equipment - use your smartphone camera for a quick eye check.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials Section -->
   <section class="testimonials-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="animate-fade-in">Success Stories</h2>
-        <p class="animate-fade-in">
-          Hear from people who've benefited from early detection.
-        </p>
-      </div>
-      
-      <div class="testimonials-grid">
-        <div class="testimonial-card animate-slide-in-right" style="animation-delay: 0ms;">
-          <blockquote>
-            "EyeDetect helped me identify early signs of glaucoma that I wouldn't have noticed otherwise. The early detection allowed for timely treatment."
-          </blockquote>
-          <div class="testimonial-author">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" 
-              alt="Michael Chen"
-            />
-            <div>
-              <p class="author-name">Michael Chen</p>
-              <p class="author-role">Patient</p>
-            </div>
-          </div>
+    <div class="section-header">
+      <h2 class="animate-scale-up">What Our Users Say</h2>
+    </div>
+    
+    <div class="testimonials-container">
+      <div class="testimonial-card animate-slide-in-left">
+        <div class="testimonial-content">
+          <p>"Eye Care Pro detected early signs of glaucoma that I wasn't aware of. After consulting with my doctor, I started treatment early and prevented potential vision loss."</p>
         </div>
-        
-        <div class="testimonial-card animate-slide-in-right" style="animation-delay: 150ms;">
-          <blockquote>
-            "As an ophthalmologist, I find EyeDetect to be an invaluable tool for preliminary screenings. It helps my patients understand the importance of regular eye check-ups."
-          </blockquote>
-          <div class="testimonial-author">
-            <img 
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" 
-              alt="Dr. Sarah Johnson"
-            />
-            <div>
-              <p class="author-name">Dr. Sarah Johnson</p>
-              <p class="author-role">Ophthalmologist</p>
-            </div>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=60&h=60&q=80" alt="Sarah J.">
+          <div>
+            <h4>Sarah J.</h4>
+            <p>Teacher, 42</p>
           </div>
         </div>
       </div>
       
-      <div class="text-center mt-12">
-        <a href="prediction.html" class="btn-primary">
-          Try It Yourself
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-        </a>
+      <div class="testimonial-card animate-scale-up">
+        <div class="testimonial-content">
+          <p>"As someone with a family history of macular degeneration, I use Eye Care Pro for regular screenings between my annual check-ups. It gives me peace of mind."</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=60&h=60&q=80" alt="Robert M.">
+          <div>
+            <h4>Robert M.</h4>
+            <p>Engineer, 57</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card animate-slide-in-right">
+        <div class="testimonial-content">
+          <p>"Living in a rural area, specialized eye care is hours away. Eye Care Pro helps me monitor my diabetic retinopathy between my visits to the city for checkups."</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=60&h=60&q=80" alt="Maria C.">
+          <div>
+            <h4>Maria C.</h4>
+            <p>Store Owner, 63</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
+
   <!-- CTA Section -->
   <section class="cta-section">
-    <div class="container text-center">
-      <h2 class="animate-fade-in">
-        Ready to Check Your Eye Health?
-      </h2>
-      <p class="animate-fade-in">
-        Early detection is crucial for preventing vision loss. Take the first step towards protecting your eyesight today.
-      </p>
-      <a href="prediction.html" class="btn-secondary animate-fade-in">
-        Start Free Detection
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-      </a>
+    <div class="cta-content animate-fade-in">
+      <h2>Start Your Eye Health Journey Today</h2>
+      <p>Early detection is key to preserving your vision. Take the first step toward protecting your eye health.</p>
+      <a href="prediction.html" class="primary-btn">Check My Eyes Now</a>
     </div>
   </section>
-  
+
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 EyeDetect. All rights reserved. This application is for educational purposes only.</p>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="https://images.unsplash.com/photo-1522230111100-bceae1370e46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=50&h=50&q=80" alt="Eye Care Pro Logo">
+        <h3>Eye Care Pro</h3>
+        <p>AI-powered eye disease detection</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-links-column">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="prediction.html">Eye Check</a></li>
+            <li><a href="about.html">Eye Diseases</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links-column">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 Eye Care Pro. All rights reserved.</p>
+      <p>Disclaimer: This tool is not a substitute for professional medical advice, diagnosis, or treatment.</p>
     </div>
   </footer>
 
